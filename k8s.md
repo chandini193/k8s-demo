@@ -17,7 +17,25 @@ These are tools which group systems together to form clusters where containers' 
 
 *Kubernetes is an open-source system for automating deployment, scaling, and management of containerized application.*
 
-Kubernetes comes from the Greek word κυβερνήτης, which means helmsman or ship pilot. With this analogy in mind, we can think of Kubernetes as the pilot on a ship of containers.
+Kubernetes comes from the Greek word `κυβερνήτης`, which means helmsman or ship pilot. With this analogy in mind, we can think of Kubernetes as the pilot on a ship of containers.
+
+## Key Features
+
+### Deployment:
+we define the desired state of our application, k8s takes care of scheduling of containers on the appropriate nodes depending upon the resource availability and affinity rules
+
+### Scaling:
+depending upon the scaling rules and policies k8s will scale in or scale out based on CPU utilization, memory usage or any custom metric we define.
+
+### Health Monitoring:
+k8s continuously monitors the health of the container, if the container becomes unhealthy, crashes or unreachable k8s will restart the container automatically
+
+### Rolling update and Rollbacks:
+k8s support rolling updates, allowing you to update containerized applications without downtime.
+
+### Networking:
+They provide features like service discovery and load balancing, allowing containers to communicate with each other easily. Containers can be grouped together as services and exposed via a single endpoint, simplifying networking configurations.
+
 
 ## Architecture
 
@@ -26,7 +44,7 @@ At a very high level, Kubernetes is a cluster of compute systems categorized by 
 * One or more control plane nodes
 * One or more worker nodes (optional, but recommended).
 
-<img src="kubernetes-architecture.jpg" alt="architecture" width="700"/>
+![img.png](img.png)
 
 ### Worker Node Overview
 
